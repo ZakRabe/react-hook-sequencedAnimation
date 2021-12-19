@@ -8,7 +8,7 @@ CSS doesn't support setting a delay between the iterations of an infinite CSS an
 
 useSequencedAnimation accepts CSS-in-JS keyframes for a single animation, a duration for the animnation (D), and the number of items (N) you'd like to use the animation on. 
 
-WWith this information, the hook creates a new keyframe object, which executes the animation, then "waits" for (D * N-1). 
+With this information, the hook creates a new keyframe object, which executes the animation, then "waits" for (D * N-1). 
 The hook also returns a helper function to get the full duration of the new animation, and the `animation-delay` property for an item, based on its index.
 
 This give the appearance of doing the original animation over all the elements in order, but actually, we're using `animation-delay` to play a new animation that is (D * N) seconds long after a (D * index) delay.
