@@ -2,13 +2,15 @@
 
 there isn't a way to use a single infinite CSS animation sequentially on multiple elements, using only CSS.   
 
-CSS doesn't support setting a delay between the iterations of an infinite CSS animation. If it did, we could use the same animation and the `animation-delay` and the non-existant `animation-interval` to give the appearance of the elements animating in order.
+CSS doesn't support setting a delay between the iterations of an infinite CSS animation. If it did, we could define the keyframes for the animation of one item and use `animation-delay` and the non-existant `animation-interval` to give the appearance of the elements animating in order.
+
+But since wwe can't to achieve this effect, we have to scale the original keyframes down to animate one item, then wait for the other items.
 
 ## What does this do?
 
 useSequencedAnimation accepts CSS-in-JS keyframes for a single animation, a duration for the animnation (D), and the number of items (N) you'd like to use the animation on. 
 
-With this information, the hook creates a new keyframe object, which executes the animation, then "waits" for (D * N-1). 
+With this information, the hook creates a new keyframes object, which executes the animation, then "waits" for (D * N-1). 
 The hook also returns a helper function to get the full duration of the new animation, and the `animation-delay` property for an item, based on its index.
 
 This gives the appearance of doing the original animation over all the elements in order, but actually, we're using `animation-delay` to play a new animation that is (D * N) seconds long after a (D * index) delay.
