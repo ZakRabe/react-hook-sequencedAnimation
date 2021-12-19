@@ -22,9 +22,7 @@ export const useFadeBetween = (count: number) => {
 
   const { fade } = makeStyles(() =>
     createStyles({
-      [`@keyframes fade`]: {
-        ...keyframes,
-      },
+      [`@keyframes fade`]: keyframes,
       [`fade`]: {
         opacity: 0,
         animation: `$fade ${duration}s linear infinite`,
