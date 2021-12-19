@@ -4,7 +4,7 @@ there isn't a way to use a single infinite CSS animation sequentially on multipl
 
 CSS doesn't support setting a delay between the iterations of an infinite CSS animation. If it did, we could define the keyframes for the animation of one item and use `animation-delay` and the non-existant `animation-interval` to give the appearance of the elements animating in order.
 
-But since wwe can't to achieve this effect, we have to scale the original keyframes down to animate one item, then wait for the other items.
+But since we can't achieve this effect, we have to scale the original keyframes down to animate one item, then wait for the other items.
 
 ## What does this do?
 
