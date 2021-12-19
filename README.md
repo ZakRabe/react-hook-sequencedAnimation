@@ -18,3 +18,7 @@ This gives the appearance of doing the original animation over all the elements 
 The nice part is you don't have to do any math to figure out how to transform your initial animation into one that can use this technique. You can define your keyframes for the animation you want to repeat, instead of having to define the transformed keyframes, which can obfusicate the effect you are trying to achieve. 
 
 This repo is a codesandbox.io example of how to use the hook to fade between an array of elements in order. 
+
+## Release?
+
+I will probably clean up this repo to publish the useSequencedAnimation hook, and a few animation hooks using this technique. 
