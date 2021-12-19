@@ -22,3 +22,7 @@ This repo is a codesandbox.io example of how to use the hook to fade between an 
 ## Release?
 
 I will probably clean up this repo to publish the useSequencedAnimation hook, and a few animation hooks using this technique. 
+
+## Demo
+
+https://codesandbox.io/s/github/ZakRabe/react-hook-sequencedAnimation
