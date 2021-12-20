@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <div className="App">
-      {markers.map(({text, marker}, index) => {
+      {markers.map(({text, color}, index) => {
         const {className, style} = getFadeProps(index);
         return (
           <div
