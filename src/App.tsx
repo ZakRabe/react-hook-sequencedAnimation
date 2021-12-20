@@ -17,15 +17,15 @@ export default function App() {
 
   return (
     <div className="App">
-      {markers.map((marker, index) => {
-        const fadeProps = getFadeProps(index);
+      {markers.map(({text, marker}, index) => {
+        const {className, style} = getFadeProps(index);
         return (
           <div
-            key={marker.text}
-            className={`box ${fadeProps.className}`}
-            style={{ backgroundColor: marker.color, ...fadeProps.style }}
+            key={text}
+            className={`box ${className}`}
+            style={{ backgroundColor: color, ...style }}
           >
-            {marker.text}
+            {text}
           </div>
         );
       })}
